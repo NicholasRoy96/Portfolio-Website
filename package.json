@@ -11,9 +11,11 @@
   "dependencies": {
     "core-js": "^3.6.4",
     "vue": "^2.6.11",
-    "vuetify": "^2.1.0"
+    "vuetify": "^2.2.13"
   },
   "devDependencies": {
+    "@mdi/font": "^4.9.95",
+    "@mdi/js": "^4.9.95",
     "@vue/cli-plugin-babel": "^4.2.0",
     "@vue/cli-plugin-eslint": "^4.2.0",
     "@vue/cli-service": "^4.2.0",

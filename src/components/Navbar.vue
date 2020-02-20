@@ -2,12 +2,12 @@
     <div>
         <v-app-bar
       app
-      flat
       class="transparent"
+      flat
       height="100"
-      elevate-on-scroll
+      absolute
+      hide-on-scroll
     >
-        <v-toolbar-title class="white--text">Nicholas Roy</v-toolbar-title>
         <v-spacer></v-spacer>
             <v-btn
                 text
@@ -37,8 +37,21 @@
 
 <script>
 export default {
-    name: 'Navbar'
-}
+    name: 'Navbar',
+    data() {
+        return {
+            pageTop: true
+        }
+    },
+    // computed: {
+    //      navbarClass() {
+    //         if (window.scrollY == 0) this.class = "transparent"
+    //         return this.class = "black"
+    //                 // trying to write a function to determine if page scroll is at top or elsewhere on page.
+    //                 // then can attach conditional classes to navbar - if pageTop, class = transparent, if pageScrollled, class = black
+    //      },
+    // }
+}   
 </script>
 
 <style scoped>
