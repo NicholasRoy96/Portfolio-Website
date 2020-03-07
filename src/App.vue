@@ -35,7 +35,6 @@ export default {
   }),
 };
 </script>
-// TODO: how to remove padding from v-content?
 
 <style>
 .heading {

@@ -20,50 +20,13 @@
                 </v-col>
 
                 <v-col cols="10" lg="8" md="7" align-self="center">
-                    <div>
-                        <p>I am a full stack web developer with experience working with Node.js, MongoDB, Vue,js, and WordPress.
-                        </p>
-                    </div>
-                    <div>
-                        <p>I’m always working on a personal project or two!
-                        </p>
-                    </div>
+                    <v-card shaped max-width="700" class="ml-12" color="#f5f5f5">
+                        <v-card-subtitle> I am a full stack web developer with experience working with Node.js, MongoDB, Vue,js, and WordPress.
+                        </v-card-subtitle>
+                        <v-card-subtitle>I’m always working on a personal project or two!
+                        </v-card-subtitle>
+                    </v-card>
                 </v-col >   
-            </v-row>
-
-            <v-row justify="center" class="mt-12 mb-12">
-                <v-col cols="8">
-                    <v-row justify="center"> 
-                        <v-col cols="12" align-self="center">
-                            <v-container fluid>
-                                <v-row>
-                                    <v-col
-                                    v-for="skill in skills"
-                                    :key="skill"
-                                    class="d-flex child-flex"
-                                    lg="4"
-                                    md="4"
-                                    sm="6"
-                                    align-self="center"
-                                    >
-                                        <v-card flat tile class="d-flex skill-card">
-                                            <v-row>
-                                                <v-col cols="3" align-self="center">
-                                                    <template>
-                                                        <v-icon>mdi-domain</v-icon>
-                                                    </template>
-                                                </v-col>
-                                                <v-col cols="9">
-                                                    <v-card-subtitle>{{ skill.name }}</v-card-subtitle>
-                                                </v-col>
-                                            </v-row>
-                                        </v-card>
-                                    </v-col>
-                                </v-row>
-                            </v-container>
-                        </v-col>
-                    </v-row>
-                </v-col>
             </v-row>
         </v-container>
     </div>
@@ -91,8 +54,9 @@ export default {
 </script>
 
 <style scoped>
+
 .background {
-    background:white;
+    background: white;
     color: #444649;
     font-family: raleway, sans-serif;
 }
