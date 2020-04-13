@@ -9,7 +9,9 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "core-js": "^3.6.4",
+    "email-validator": "^2.0.4",
     "vue": "^2.6.11",
     "vuetify": "^2.2.13"
   },

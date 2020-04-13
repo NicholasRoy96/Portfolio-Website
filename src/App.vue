@@ -6,6 +6,7 @@
     <v-content class="pt-0">
       <About />
       <Projects />
+      <BackendProjects />
       <Contact />
     </v-content>
     <Footer />
@@ -16,8 +17,10 @@
 import Navbar from './components/Navbar'
 import About from './components/About'
 import Projects from './components/Projects'
-import Footer from './components/Footer'
 import Contact from './components/Contact'
+import BackendProjects from './components/BackendProjects'
+import Footer from './components/Footer'
+
 
 export default {
   name: 'App',
@@ -26,8 +29,9 @@ export default {
     Navbar,
     About,
     Projects,
-    Footer,
-    Contact
+    BackendProjects,
+    Contact,
+    Footer
   },
 
   data: () => ({
@@ -40,6 +44,7 @@ export default {
 .heading {
     font-family: raleway-bold, sans-serif;
     font-size: 30pt;
+    color: #444649;
 }
 
 .heading-underline {

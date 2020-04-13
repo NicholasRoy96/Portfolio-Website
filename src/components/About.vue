@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="background about-fontsyling">
         <v-container class="background">
             <v-row class="mt-12 mb-12">
                 <v-col cols="12">
@@ -55,10 +55,13 @@ export default {
 
 <style scoped>
 
-.background {
-    background: white;
+.about-fontstyling {
     color: #444649;
     font-family: raleway, sans-serif;
+}
+
+.background {
+    background: #f5f5f5;
 }
 
 .profile {
