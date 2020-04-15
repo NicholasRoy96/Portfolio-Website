@@ -1,16 +1,28 @@
 <template>
     <div class="background backend-fontsyling">
-        <v-container>
-            <v-row class="mt-12 mb-12">
+        <v-container class="pb-10">
+            <v-row class="mt-12 mb-10" justify="center">
                 <v-col cols="12">
                     <h1 align="center" class="heading">BACK-END PROJECTS</h1>
                     <div class="heading-underline"></div>
                 </v-col>
+                <v-col cols="12">
+                    <p align="center" class="heading-subtitle">I love backend web development.</p>
+                    <p align="center" class="backend-description">Try interacting with the below RESTful API built using Express, Node.js, and MongoDB.</p>
+                </v-col>
+                <div class="d-flex">
+                    <h1 class="view-code-title">View the code on</h1>
+                    <v-btn icon>
+                        <v-icon size="32" color="black">mdi-github</v-icon>
+                    </v-btn>
+                </div>
             </v-row>
-            <v-row>
+
+            <v-row justify="center">
 
                 <!-- Form -->
-                <v-col cols="12" md="5">
+                <v-col cols="12" sm="10" md="5">
+                    <h1 align="center" class="create-view-heading">CREATE USER</h1>
                     <v-form
                     ref="form"
                     v-model="valid"
@@ -99,117 +111,139 @@
                 </v-col>
 
                 <!-- Output -->
-                <v-col cols="12" md="7">
-                    <v-row class="ml-md-4">
+                <v-col cols="12" sm="10" md="7" class="mt-10 mt-md-0">
+                    <h1 align="center" class="create-view-heading">VIEW USERS</h1>
+                    <h1 align="center" class="ml-md-8 no-users-heading" v-if="!users.length">No users exist. Try creating one!</h1>
+                    <v-row class="ml-md-8">
                         <v-col cols="12" v-for="(user, i) in users" :key="i">
 
                             <!-- Normal -->
-                            <v-card v-if="!user.editing" rounded class="pa-2 mb-2">
-                                <v-card-title class="card-title">
-                                    <strong>{{user.forename}} {{user.surname}}</strong>
-                                </v-card-title>
-                                <v-list-item>
-                                    <v-list-item-icon>
-                                        <v-icon color="#5d91a8">mdi-email-outline</v-icon>
-                                    </v-list-item-icon>
-                                    <v-list-item-subtitle>{{user.email}}</v-list-item-subtitle>
-                                </v-list-item>
+                            <v-hover
+                            v-slot:default="{ hover }"
+                            open-delay="0"
+                            >
+                                <v-card 
+                                v-if="!user.editing"
+                                :elevation="hover ? 12 : 2"
+                                rounded
+                                class="pa-2 mb-2"
+                                >
+                                    <v-card-title class="card-title">
+                                        <strong>{{user.forename}} {{user.surname}}</strong>
+                                    </v-card-title>
+                                    <v-list-item>
+                                        <v-list-item-icon>
+                                            <v-icon color="#5d91a8">mdi-email-outline</v-icon>
+                                        </v-list-item-icon>
+                                        <v-list-item-subtitle>{{user.email}}</v-list-item-subtitle>
+                                    </v-list-item>
 
-                                <v-list-item>
-                                    <v-list-item-icon>
-                                        <v-icon color="#5d91a8">mdi-calendar-range</v-icon>
-                                    </v-list-item-icon>
-                                    <v-list-item-subtitle>{{user.dob}}</v-list-item-subtitle>
-                                    <v-btn icon :disabled="editing" @click="()=>{user.editing = true; editing = true}">
-                                        <v-icon color="blue">mdi-pencil</v-icon>
-                                    </v-btn>
-                                    <v-btn icon :disabled="editing" @click="deleteUser(user._id)">
-                                        <v-icon color="red">mdi-close-circle</v-icon>
-                                    </v-btn>
-                                </v-list-item>
-                            </v-card>
+                                    <v-list-item>
+                                        <v-list-item-icon>
+                                            <v-icon color="#5d91a8">mdi-calendar-range</v-icon>
+                                        </v-list-item-icon>
+                                        <v-list-item-subtitle>{{user.dob}}</v-list-item-subtitle>
+                                        <v-btn icon :disabled="editing" @click="()=>{user.editing = true; editing = true}">
+                                            <v-icon color="blue">mdi-pencil</v-icon>
+                                        </v-btn>
+                                        <v-btn icon :disabled="editing" @click="deleteUser(user._id)">
+                                            <v-icon color="red">mdi-close-circle</v-icon>
+                                        </v-btn>
+                                    </v-list-item>
+                                </v-card>
+                            </v-hover>
 
 
                             <!-- Editing -->
-                            <v-card v-if="user.editing" rounded class="mb-2 pt-5 pl-5">
-                                <v-form v-model="user.valid" lazy-validation>
-                                    <v-row class="pl-2 pr-7">
-                                        <v-col cols="6">
-                                            <v-text-field
-                                            v-model="user.forename"
-                                            :counter="15"
-                                            :rules="forenameRules"
-                                            label="Forename"
-                                            class="edit-field" 
-                                            dense
-                                            required
-                                            ></v-text-field>
-                                        </v-col>
-                                        <v-col cols="6">
-                                            <v-text-field
-                                            v-model="user.surname"
-                                            :counter="15"
-                                            :rules="surnameRules"
-                                            label="Surname"
-                                            class="edit-field"
-                                            required
-                                            dense
-                                            ></v-text-field>
-                                        </v-col>
-                                    </v-row>
+                            <v-hover
+                            v-slot:default="{ hover }"
+                            open-delay="0"
+                            >
+                                <v-card
+                                v-if="user.editing"
+                                :elevation="hover ? 12 : 2"
+                                rounded
+                                class="mb-2 pt-5 pl-5"
+                                >
+                                    <v-form v-model="user.valid" lazy-validation>
+                                        <v-row class="pl-2 pr-7">
+                                            <v-col cols="6">
+                                                <v-text-field
+                                                v-model="user.forename"
+                                                :counter="15"
+                                                :rules="forenameRules"
+                                                label="Forename"
+                                                class="edit-field" 
+                                                dense
+                                                required
+                                                ></v-text-field>
+                                            </v-col>
+                                            <v-col cols="6">
+                                                <v-text-field
+                                                v-model="user.surname"
+                                                :counter="15"
+                                                :rules="surnameRules"
+                                                label="Surname"
+                                                class="edit-field"
+                                                required
+                                                dense
+                                                ></v-text-field>
+                                            </v-col>
+                                        </v-row>
 
-                                    <v-row>
+                                        <v-row>
                                             <v-col cols="7">
-                                            <v-text-field 
-                                            v-model="user.email"
-                                            :rules="emailRules"
-                                            label="Email"
-                                            class="edit-field edit-emailordob-field"
-                                            prepend-icon="mdi-email-outline"
-                                            required
-                                            dense                    
-                                            ></v-text-field>
-                                        </v-col>
-                                    </v-row>
+                                                <v-text-field 
+                                                v-model="user.email"
+                                                :rules="emailRules"
+                                                label="Email"
+                                                class="edit-field edit-emailordob-field"
+                                                prepend-icon="mdi-email-outline"
+                                                required
+                                                dense                    
+                                                ></v-text-field>
+                                            </v-col>
+                                        </v-row>
 
-                                    <v-row justify="space-between">
-                                        <v-col cols="7">
-                                            <v-menu
-                                            v-model="user.menu"
-                                            :close-on-content-click="false"
-                                            :nudge-right="40"
-                                            transition="scale-transition"
-                                            offset-y
-                                            min-width="290px"
-                                            >
-                                                <template v-slot:activator="{ on }">
-                                                    <v-text-field
-                                                    v-model="user.dob"
-                                                    :rules="dobRules"
-                                                    label="Date of birth"
-                                                    class="edit-field edit-emailordob-field"
-                                                    prepend-icon="mdi-calendar-range"
-                                                    required
-                                                    dense
-                                                    readonly
-                                                    v-on="on"
-                                                    ></v-text-field>
-                                                </template>
-                                                <v-date-picker v-model="user.dob" @input="user.menu = false"></v-date-picker>
-                                            </v-menu>
-                                        </v-col>                                        
-                                        <v-col cols="2" class="pl-0" align-self="center">
-                                            <v-btn icon :disabled="!user.valid" @click="updateUser(user)">
-                                                <v-icon color="green">mdi-check-outline</v-icon>
-                                            </v-btn>
-                                            <v-btn icon disabled>
-                                                <v-icon color="red">mdi-close-circle</v-icon>
-                                            </v-btn>
-                                        </v-col>
-                                    </v-row>
-                                </v-form>
-                            </v-card>
-
+                                        <v-row justify="space-between">
+                                            <v-col cols="7">
+                                                <v-menu
+                                                v-model="user.menu"
+                                                :close-on-content-click="false"
+                                                :nudge-right="40"
+                                                transition="scale-transition"
+                                                offset-y
+                                                min-width="290px"
+                                                >
+                                                    <template v-slot:activator="{ on }">
+                                                        <v-text-field
+                                                        v-model="user.dob"
+                                                        :rules="dobRules"
+                                                        label="Date of birth"
+                                                        class="edit-field edit-emailordob-field"
+                                                        prepend-icon="mdi-calendar-range"
+                                                        required
+                                                        dense
+                                                        readonly
+                                                        v-on="on"
+                                                        ></v-text-field>
+                                                    </template>
+                                                    <v-date-picker v-model="user.dob" @input="user.menu = false"></v-date-picker>
+                                                </v-menu>
+                                            </v-col>
+                                            
+                                            <div class="edit-button-div">
+                                                <v-btn icon :disabled="!user.valid" @click="updateUser(user)">
+                                                    <v-icon color="green">mdi-check-outline</v-icon>
+                                                </v-btn>
+                                                <v-btn icon disabled>
+                                                    <v-icon color="red">mdi-close-circle</v-icon>
+                                                </v-btn>
+                                            </div>
+                                        </v-row>
+                                    </v-form>
+                                </v-card>
+                            </v-hover>
                         </v-col>
                     </v-row>
                 </v-col>
@@ -353,11 +387,48 @@ export default {
     font-family: raleway, sans-serif;
 }
 
+.heading-subtitle {
+    color: #444649;
+    font-family: raleway, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.backend-description {
+    color: #444649;
+    font-family: raleway, sans-serif;
+    font-size: 1.2em;
+}
+
+.create-view-heading {
+    color: #444649;
+    font-family: raleway, sans-serif;
+    padding-bottom: 20px;
+}
+
+.no-users-heading {
+    color: #444649;
+    font-family: raleway, sans-serif;
+    font-size: 1.5em;
+    padding-top: 40px;
+}
+
 .card-title {
     color: #444649;
     font-family: raleway, sans-serif;
     /* border-bottom: 2px solid #444649; */
 }
 
+.edit-button-div {
+    position: absolute;
+    bottom: 18px;
+    right: 24px;
+}
 
+.view-code-title {
+    color: #444649;
+    font-family: raleway, sans-serif;
+    font-size: 1.5em;
+    padding-right: 8px;
+}
 </style>

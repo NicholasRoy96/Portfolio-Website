@@ -4,7 +4,6 @@
     </v-parallax>
     <Navbar/>
     <v-content class="pt-0">
-      <About />
       <Projects />
       <BackendProjects />
       <Contact />
@@ -15,7 +14,6 @@
 
 <script>
 import Navbar from './components/Navbar'
-import About from './components/About'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import BackendProjects from './components/BackendProjects'
@@ -27,7 +25,6 @@ export default {
 
   components: {
     Navbar,
-    About,
     Projects,
     BackendProjects,
     Contact,

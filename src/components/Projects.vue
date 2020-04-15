@@ -55,77 +55,86 @@
 
     <!-- BLOGIFY -->
         <v-container>
-            <v-row justify="center">
-                    <v-col cols="10" md="6">
-                        <v-card flat color="transparent">
-                            <h1 class="project-title">{{blogify.title}}</h1>
-                            <div class="project-title-underline"></div>
-                            <v-card-text class="project-description">{{blogify.description}}</v-card-text>
-                            <v-btn large class="project-button ma-4 mt-8 mr-8" outlined>Visit website</v-btn>
-                            <v-btn large class="project-button ma-4 mt-8 ml-8" outlined>View code</v-btn>
-                        </v-card>
-                    </v-col>
-                </v-row>
 
-                <v-row justify="center">
-                    <v-col cols="12">
-                        <v-row justify="center">
-                            <v-col
-                                v-for="(screenshot, index) in blogify.screenshots"
-                                :key="index"
-                                class="d-flex child-flex"
-                                cols="12"
-                            >
-                                <v-card flat class="d-flex">
-                                        <v-img
-                                            class="image"
-                                            :src="screenshot.url"
-                                        >
-                                        </v-img>
-                                </v-card>
-                            </v-col>
-                        </v-row>
-                    </v-col>
-                </v-row>   
+        <!-- MD + -->
+            <v-row justify="center" class="d-none d-md-flex mt-12">
+                <v-col cols="12" sm="10" md="6"> 
+                    <v-card flat>
+                        <v-img class="image" :src="blogify.mainImage" />
+                    </v-card>
+                </v-col>
+                <v-col cols="10" md="6">
+                    <v-card flat color="transparent">
+                        <h1 class="project-title">{{blogify.title}}</h1>
+                        <div class="project-title-underline"></div>
+                        <v-card-text class="project-description">{{blogify.description}}</v-card-text>
+                        <v-btn large class="project-button ma-4 mt-8" outlined>Visit website</v-btn>
+                        <v-btn large class="project-button ma-4 mt-8 ml-8" outlined>View code</v-btn>
+                    </v-card>
+                </v-col>
+            </v-row>
+
+            <!-- SM - -->
+            <v-row justify="center" class="d-md-none mt-12">
+                <v-col cols="10" md="6">
+                    <v-card flat color="transparent">
+                        <h1 class="project-title">{{blogify.title}}</h1>
+                        <div class="project-title-underline"></div>
+                        <v-card-text class="project-description">{{blogify.description}}</v-card-text>
+                        <v-btn large class="project-button ma-4 mt-8" outlined>Visit website</v-btn>
+                        <v-btn large class="project-button ma-4 mt-8 ml-8" outlined>View code</v-btn>
+                    </v-card>
+                </v-col>
+                <v-col cols="12" sm="10" md="6"> 
+                    <v-card flat>
+                        <v-img class="image" :src="blogify.mainImage" />
+                    </v-card>
+                </v-col>
+            </v-row>
+            <v-row justify="center" class="mb-12">
+                <v-col cols="12">
+                    <v-row justify="center">
+                        <v-col
+                            v-for="(screenshot, index) in blogify.screenshots"
+                            :key="index"
+                            class="d-flex child-flex"
+                            cols="12"
+                            sm="10"
+                            md="6"
+                        >
+                            <v-card flat class="d-flex">
+                                    <v-img
+                                        class="image"
+                                        :src="screenshot.url"
+                                    >
+                                    </v-img>
+                            </v-card>
+                        </v-col>
+                    </v-row>
+                </v-col>
+            </v-row>   
         </v-container>
 
     <!-- MARK BAILEY COACHING -->
         <div>
             <v-container>
-
-            <!-- MD + -->
-                <v-row justify="center" class="d-none d-md-flex mt-12">
-                    <v-col cols="12" sm="10" md="6"> 
-                        <v-card flat>
-                            <v-img class="image" :src="baileyCoaching.mainImage" />
-                        </v-card>
-                    </v-col>
+                <v-row justify="center" class="mt-12">
                     <v-col cols="10" md="6">
                         <v-card flat color="transparent">
                             <h1 class="project-title">{{baileyCoaching.title}}</h1>
                             <div class="project-title-underline"></div>
                             <v-card-text class="project-description">{{baileyCoaching.description}}</v-card-text>
-                            <v-btn large class="project-button ma-4 mt-8" outlined>Visit website</v-btn>
+                            <!-- <v-card-text><span class="project-technologies-title">Technologies:</span><span class="project-technologies">Vue, Vuetify</span></v-card-text> -->
+                            <v-btn large class="project-button ma-4 mt-8 mr-8" outlined>Visit website</v-btn>
                         </v-card>
                     </v-col>
-                </v-row>
-
-                <!-- SM - -->
-                <v-row justify="center" class="d-md-none mt-12">
-                    <v-col cols="10" md="6">
-                        <v-card flat color="transparent">
-                            <h1 class="project-title">{{baileyCoaching.title}}</h1>
-                            <div class="project-title-underline"></div>
-                            <v-card-text class="project-description">{{baileyCoaching.description}}</v-card-text>
-                            <v-btn large class="project-button ma-4 mt-8" outlined>Visit website</v-btn>
-                        </v-card>
-                    </v-col>
-                    <v-col cols="12" sm="10" md="6"> 
+                    <v-col cols="12" sm="10" md="6" align-self="center">
                         <v-card flat>
                             <v-img class="image" :src="baileyCoaching.mainImage" />
                         </v-card>
                     </v-col>
                 </v-row>
+
                 <v-row justify="center" class="mb-12">
                     <v-col cols="12">
                         <v-row justify="center">
@@ -162,12 +171,14 @@ export default {
                 { url: require('@/assets/CSExchangeScreenshot.png') },
                 { url: require('@/assets/CSExchangeTableScreenshot.png') }
             ]},
-            baileyCoaching: {title: "MARK BAILEY COACHING", description: "This is sample text to see if the styling works for Mark Bailey Coaching.", mainImage: require("@/assets/MBHomepageEdited.png"), screenshots: [
+            baileyCoaching: {title: "MARK BAILEY COACHING", description: "This is sample text to see if the styling works for Mark Bailey Coaching.", mainImage: require("@/assets/MBHomepageScreenshot.png"), screenshots: [
                 { url: require('@/assets/MBAboutScreenshot.png') },
                 { url: require('@/assets/MBTestimonialModalScreenshot.png') },
             ]},
-            blogify: {title: "BLOGIFY", description: "This is sample text to see if styling works for Blogify", mainImage: require("@/assets/MBHomepageScreenshot2.png"), screenshots: [
-                { url: require('@/assets/BLOGResponsiveScreenshot.png')}
+            blogify: {title: "BLOGIFY", description: "This is sample text to see if styling works for Blogify", mainImage: require("@/assets/BLOGHomepageScreenshot.png"), screenshots: [
+                { url: require('@/assets/BLOGCardScreenshot.png')},
+                { url: require('@/assets/BLOGFooterScreenshot.png')}
+
             ]},
         }
     }
