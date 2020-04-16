@@ -15,9 +15,8 @@
                             <h1 class="project-title">{{coinsumption.title}}</h1>
                             <div class="project-title-underline"></div>
                             <v-card-text class="project-description">{{coinsumption.description}}</v-card-text>
-                            <!-- <v-card-text><span class="project-technologies-title">Technologies:</span><span class="project-technologies">Vue, Vuetify</span></v-card-text> -->
-                            <v-btn large class="project-button ma-4 mt-8 mr-8" outlined>Visit website</v-btn>
-                            <v-btn large class="project-button ma-4 mt-8 ml-8" outlined>View code</v-btn>
+                            <v-btn large class="project-button ma-4 mt-8 mr-8" outlined href="https://coinsumption.herokuapp.com/" target="_blank">Visit website</v-btn>
+                            <v-btn large class="project-button ma-4 mt-8 ml-8" outlined href="https://github.com/NicholasRoy96/Portfolio-Website" target="_blank">View code</v-btn>
                         </v-card>
                     </v-col>
                     <v-col cols="12" sm="10" md="6" align-self="center">
@@ -68,8 +67,8 @@
                         <h1 class="project-title">{{blogify.title}}</h1>
                         <div class="project-title-underline"></div>
                         <v-card-text class="project-description">{{blogify.description}}</v-card-text>
-                        <v-btn large class="project-button ma-4 mt-8" outlined>Visit website</v-btn>
-                        <v-btn large class="project-button ma-4 mt-8 ml-8" outlined>View code</v-btn>
+                        <v-btn large class="project-button ma-4 mt-8" outlined href="https://nicholasroy96.github.io/blogify/" target="_blank">Visit website</v-btn>
+                        <v-btn large class="project-button ma-4 mt-8 ml-8" outlined href="https://github.com/NicholasRoy96/blogify" target="_blank">View code</v-btn>
                     </v-card>
                 </v-col>
             </v-row>
@@ -81,8 +80,8 @@
                         <h1 class="project-title">{{blogify.title}}</h1>
                         <div class="project-title-underline"></div>
                         <v-card-text class="project-description">{{blogify.description}}</v-card-text>
-                        <v-btn large class="project-button ma-4 mt-8" outlined>Visit website</v-btn>
-                        <v-btn large class="project-button ma-4 mt-8 ml-8" outlined>View code</v-btn>
+                        <v-btn large class="project-button ma-4 mt-8" outlined href="https://nicholasroy96.github.io/blogify/" target="_blank">Visit website</v-btn>
+                        <v-btn large class="project-button ma-4 mt-8 ml-8" outlined href="https://github.com/NicholasRoy96/blogify" target="_blank">View code</v-btn>
                     </v-card>
                 </v-col>
                 <v-col cols="12" sm="10" md="6"> 
@@ -124,7 +123,7 @@
                             <h1 class="project-title">{{baileyCoaching.title}}</h1>
                             <div class="project-title-underline"></div>
                             <v-card-text class="project-description">{{baileyCoaching.description}}</v-card-text>
-                            <v-btn large class="project-button ma-4 mt-8 mr-8" outlined>Visit website</v-btn>
+                            <v-btn large class="project-button ma-4 mt-8 mr-8" outlined href="http://markbaileycoaching.co.uk/" target="_blank">Visit website</v-btn>
                         </v-card>
                     </v-col>
                     <v-col cols="12" sm="10" md="6" align-self="center">
