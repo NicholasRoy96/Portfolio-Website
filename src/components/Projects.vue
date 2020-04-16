@@ -75,7 +75,7 @@
             </v-row>
 
             <!-- SM - -->
-            <v-row justify="center" class="d-md-none mt-12">
+            <v-row justify="center" class="d-md-none mt-6">
                 <v-col cols="10" md="6">
                     <v-card flat color="transparent">
                         <h1 class="project-title">{{blogify.title}}</h1>
@@ -118,13 +118,12 @@
     <!-- MARK BAILEY COACHING -->
         <div>
             <v-container>
-                <v-row justify="center" class="mt-12">
+                <v-row justify="center" class="mt-6 mt-md-12">
                     <v-col cols="10" md="6">
                         <v-card flat color="transparent">
                             <h1 class="project-title">{{baileyCoaching.title}}</h1>
                             <div class="project-title-underline"></div>
                             <v-card-text class="project-description">{{baileyCoaching.description}}</v-card-text>
-                            <!-- <v-card-text><span class="project-technologies-title">Technologies:</span><span class="project-technologies">Vue, Vuetify</span></v-card-text> -->
                             <v-btn large class="project-button ma-4 mt-8 mr-8" outlined>Visit website</v-btn>
                         </v-card>
                     </v-col>
@@ -195,7 +194,7 @@ export default {
     margin-bottom: 15px;
 }
 .project-title {
-    color: #7a7976;
+    color: #455a64;
     padding: 16px;
     padding-bottom: 4px;
     font-weight: 900;

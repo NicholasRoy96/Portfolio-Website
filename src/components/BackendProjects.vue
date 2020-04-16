@@ -124,9 +124,10 @@
                             >
                                 <v-card 
                                 v-if="!user.editing"
-                                :elevation="hover ? 12 : 2"
-                                rounded
-                                class="pa-2 mb-2"
+                                :elevation="hover ? 8 : 0"
+                                class="user-card pa-2 mb-2"
+                                shaped
+                                outlined
                                 >
                                     <v-card-title class="card-title">
                                         <strong>{{user.forename}} {{user.surname}}</strong>
@@ -401,7 +402,7 @@ export default {
 }
 
 .create-view-heading {
-    color: #444649;
+    color: #455a64;
     font-family: raleway, sans-serif;
     padding-bottom: 20px;
 }

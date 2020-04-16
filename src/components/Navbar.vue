@@ -1,35 +1,73 @@
 <template>
     <div>
         <v-app-bar
-      app
-      class="transparent"
-      flat
-      height="100"
-      absolute
-      hide-on-scroll
-    >
+        app
+        class="transparent"
+        flat
+        height="100"
+        absolute
+        hide-on-scroll
+        >
         <v-spacer></v-spacer>
             <v-btn
-                text
-                class="white--text"
-                x-large
-                href="#about"
+            text
+            class="white--text"
+            x-large
+            v-scroll-to="{
+                el: '#frontend',
+                duration: 1000,
+                easing: 'linear',
+                offset: 0,
+                force: true,
+                cancelable: true,
+                onStart: onStart,
+                onDone: onDone,
+                onCancel: onCancel,
+                x: false,
+                y: true
+            }"
             >
-                About
+            Frontend
             </v-btn>
             <v-btn
-                text
-                class="white--text"
-                x-large
+            text
+            class="white--text"
+            x-large
+            v-scroll-to="{
+                el: '#backend',
+                duration: 1000,
+                easing: 'linear',
+                offset: 0,
+                force: true,
+                cancelable: true,
+                onStart: onStart,
+                onDone: onDone,
+                onCancel: onCancel,
+                x: false,
+                y: true
+            }"
             >
-                Projects
+            Backend
             </v-btn>
             <v-btn
-                text
-                class="white--text"
-                x-large
+            text
+            class="white--text"
+            x-large
+            v-scroll-to="{
+                el: '#contact',
+                duration: 1000,
+                easing: 'linear',
+                offset: 0,
+                force: true,
+                cancelable: true,
+                onStart: onStart,
+                onDone: onDone,
+                onCancel: onCancel,
+                x: false,
+                y: true
+            }"
             >
-                Contact
+            Contact
             </v-btn>
         </v-app-bar>
     </div>
