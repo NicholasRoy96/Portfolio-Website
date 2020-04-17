@@ -306,7 +306,7 @@ export default {
             }
         },
         async getUsers () {
-            await axios.get('https://git.heroku.com/nick-roy-api.git/user/getAll')
+            await axios.get('https://nick-roy-api.herokuapp.com/user/getAll')
             .then(response => {
                 this.users = response.data.reverse().slice(0, 3)
                 .map(user => {
@@ -318,7 +318,7 @@ export default {
         async createUser () {
             this.validate()
             if (this.createValidate()) {
-                await axios.post('https://git.heroku.com/nick-roy-api.git/user/create', {
+                await axios.post('https://nick-roy-api.herokuapp.com/user/create', {
                     forename: this.forename,
                     surname: this.surname,
                     email: this.email,
@@ -333,7 +333,7 @@ export default {
             }
         },
         async deleteUser (id) {
-            await axios.delete(`https://git.heroku.com/nick-roy-api.git/user/delete/${id}`)
+            await axios.delete(`https://nick-roy-api.herokuapp.com/user/delete/${id}`)
             .then((response) => {
                 console.log(response)
                 this.getUsers()
@@ -348,7 +348,7 @@ export default {
                     email: user.email,
                     dob: user.dob
                 }
-                await axios.put(`https://git.heroku.com/nick-roy-api.git/user/update/${user._id}`, updateDocument)
+                await axios.put(`https://nick-roy-api.herokuapp.com/user/update/${user._id}`, updateDocument)
                 .then(response => {
                     console.log(response)
                     user.editing = false
