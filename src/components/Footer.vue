@@ -11,8 +11,8 @@
     cols="12"
     >
       <v-btn
-      v-for="link in footerLinks"
-      :key="link"
+      v-for="(link, index) in footerLinks"
+      :key="index"
       :href="link.url"
       target="_blank"
       color="white"
