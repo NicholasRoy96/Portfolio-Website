@@ -41,7 +41,9 @@
             </v-btn>
         </div>
         <div class="view-work-container">
-            <h2>View my work</h2>
+            <a v-scroll-to="'#frontend'">
+              <h2 class="view-work">View my work</h2>
+            </a>
             <a v-scroll-to="'#frontend'">
                 <v-icon
                 color="white"
@@ -162,7 +164,9 @@ export default {
     bottom: 50px;
     text-align: center;
 }
-
+.view-work {
+    color: white !important;
+}
 h1 {
 font-weight: normal;
 
@@ -187,5 +191,27 @@ font-weight: normal;
     49% { background-color: #fff; }
     50% { background-color: transparent; }
     99% { background-color: transparent; }
+}
+
+/* MEDIA QUERIES */
+
+/* SM */
+@media (max-width: 960px) {
+    .title-container {
+        font-size: 2.3em;
+    }
+    .type-container {
+        font-size: 1.5em;
+    }
+}
+
+/* XS */
+@media (max-width: 600px) {
+    .title-container {
+        font-size: 1.5em;
+    }
+    .type-container {
+        font-size: 1em;
+    }
 }
 </style>

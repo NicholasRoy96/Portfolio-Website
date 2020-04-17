@@ -6,26 +6,32 @@
       justify="center"
       no-gutters
     >
+    <v-col
+    class="footer-links py-4 text-center white--text"
+    cols="12"
+    >
+      <v-btn
+      v-for="link in footerLinks"
+      :key="link"
+      :href="link.url"
+      target="_blank"
+      color="white"
+      class="ma-4 mt-0 mb-0"
+      icon
+      rounded
+      >
+        <v-icon>
+          {{ link.icon }}
+        </v-icon>
+      </v-btn>
+    </v-col>
       <v-col
-        class="blue-grey darken-2 py-4 text-center white--text"
+        class="py-4 text-center white--text"
         cols="12"
       >
         {{ new Date().getFullYear() }} — <strong>Nicholas Roy</strong>
       </v-col>
-      <v-col
-        class="blue-grey darken-2 py-4 text-center white--text"
-        cols="12"
-      >
-      <v-btn
-        v-for="link in footerLinks"
-        :key="link"
-        color="white"
-        text
-        rounded
-      >
-        {{ link }}
-      </v-btn>
-      </v-col>
+      
     </v-row>
   </v-footer>
 </template>
@@ -33,15 +39,20 @@
 <script>
   export default {
     data: () => ({
-      footerLinks: [
-        'LinkedIn',
-        'GitHub',
-        'Codewars',
-      ],
+      footerLinks: {
+        linkedIn: {icon: 'mdi-linkedin', url: 'https://www.linkedin.com/in/nicholas-roy-b1078a19a/'},
+        github: {icon: 'mdi-github', url: 'https://github.com/NicholasRoy96'}
+      },
     }),
   }
 </script>
 
-<style scoped>
+<style>
+footer {
+    background-color: #455a64 !important;
+}
 
+/* .footer-links {
+    background-color: #7193a3 !important;
+} */
 </style>

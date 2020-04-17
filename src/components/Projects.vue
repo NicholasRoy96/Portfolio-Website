@@ -14,14 +14,17 @@
                         <v-card flat color="transparent">
                             <h1 class="project-title">{{coinsumption.title}}</h1>
                             <div class="project-title-underline"></div>
+                            <div v-for="(tech, index) in coinsumption.tech" :key="index" class="tech-div">
+                                <p>{{tech}}</p>
+                            </div>
                             <v-card-text class="project-description">{{coinsumption.description}}</v-card-text>
                             <v-btn large class="project-button ma-4 mt-8 mr-8" outlined href="https://coinsumption.herokuapp.com/" target="_blank">Visit website</v-btn>
-                            <v-btn large class="project-button ma-4 mt-8 ml-8" outlined href="https://github.com/NicholasRoy96/Portfolio-Website" target="_blank">View code</v-btn>
+                            <v-btn large class="project-button ma-4 mt-8 ml-8" outlined href="https://github.com/NicholasRoy96/coinsumption_app" target="_blank">View code</v-btn>
                         </v-card>
                     </v-col>
                     <v-col cols="12" sm="10" md="6" align-self="center">
                         <v-card flat>
-                            <v-img class="image" :src="coinsumption.mainImage" />
+                                <v-img class="image" :src="coinsumption.mainImage" />                      
                         </v-card>
                     </v-col>
                 </v-row>
@@ -57,7 +60,7 @@
 
         <!-- MD + -->
             <v-row justify="center" class="d-none d-md-flex mt-12">
-                <v-col cols="12" sm="10" md="6"> 
+                <v-col cols="12" sm="10" md="6" align-self="center"> 
                     <v-card flat>
                         <v-img class="image" :src="blogify.mainImage" />
                     </v-card>
@@ -66,6 +69,9 @@
                     <v-card flat color="transparent">
                         <h1 class="project-title">{{blogify.title}}</h1>
                         <div class="project-title-underline"></div>
+                        <div v-for="(tech, index) in blogify.tech" :key="index" class="tech-div">
+                            <p>{{tech}}</p>
+                        </div>
                         <v-card-text class="project-description">{{blogify.description}}</v-card-text>
                         <v-btn large class="project-button ma-4 mt-8" outlined href="https://nicholasroy96.github.io/blogify/" target="_blank">Visit website</v-btn>
                         <v-btn large class="project-button ma-4 mt-8 ml-8" outlined href="https://github.com/NicholasRoy96/blogify" target="_blank">View code</v-btn>
@@ -75,10 +81,13 @@
 
             <!-- SM - -->
             <v-row justify="center" class="d-md-none mt-6">
-                <v-col cols="10" md="6">
+                <v-col cols="10" md="6" align-self="center">
                     <v-card flat color="transparent">
                         <h1 class="project-title">{{blogify.title}}</h1>
                         <div class="project-title-underline"></div>
+                        <div v-for="(tech, index) in blogify.tech" :key="index" class="tech-div">
+                            <p>{{tech}}</p>
+                        </div>
                         <v-card-text class="project-description">{{blogify.description}}</v-card-text>
                         <v-btn large class="project-button ma-4 mt-8" outlined href="https://nicholasroy96.github.io/blogify/" target="_blank">Visit website</v-btn>
                         <v-btn large class="project-button ma-4 mt-8 ml-8" outlined href="https://github.com/NicholasRoy96/blogify" target="_blank">View code</v-btn>
@@ -122,6 +131,9 @@
                         <v-card flat color="transparent">
                             <h1 class="project-title">{{baileyCoaching.title}}</h1>
                             <div class="project-title-underline"></div>
+                            <div v-for="(tech, index) in baileyCoaching.tech" :key="index" class="tech-div">
+                                <p>{{tech}}</p>
+                            </div>
                             <v-card-text class="project-description">{{baileyCoaching.description}}</v-card-text>
                             <v-btn large class="project-button ma-4 mt-8 mr-8" outlined href="http://markbaileycoaching.co.uk/" target="_blank">Visit website</v-btn>
                         </v-card>
@@ -165,15 +177,15 @@ export default {
     name: 'Projects',
     data() {
         return {
-            coinsumption: {title: "COINSUMPTION", description: "Developed as a personal project, coinsumption is a currency exchange application that utilises live market rates fetched from an open API. ", mainImage: require("@/assets/CSHomePageScreenshot.png"), screenshots: [
+            coinsumption: {title: "COINSUMPTION", tech: ["Vue.js", "Vuetify", "HTML", "CSS"],description: "Developed as a personal project, coinsumption is a currency exchange application that utilises live market rates fetched from an open API. Built using Vue.js and Vuetify, Coinsumption is a highly scalable application.", mainImage: require("@/assets/CSHomePageScreenshot.png"), screenshots: [
                 { url: require('@/assets/CSExchangeScreenshot.png') },
                 { url: require('@/assets/CSExchangeTableScreenshot.png') }
             ]},
-            baileyCoaching: {title: "MARK BAILEY COACHING", description: "This is sample text to see if the styling works for Mark Bailey Coaching.", mainImage: require("@/assets/MBHomepageScreenshot.png"), screenshots: [
+            baileyCoaching: {title: "MARK BAILEY COACHING", tech: ["Wordpress", "CSS"], description: "As a freelance project, I was asked to create a business website for personal training business. The brief was simple: a colour scheme of white, purple, and black, and the site must be built using a CMS. After several client meetings and feasibility studies, the end result is a stylish, responsive WordPress site.", mainImage: require("@/assets/MBHomepageScreenshot.png"), screenshots: [
                 { url: require('@/assets/MBAboutScreenshot.png') },
                 { url: require('@/assets/MBTestimonialModalScreenshot.png') },
             ]},
-            blogify: {title: "BLOGIFY", description: "This is sample text to see if styling works for Blogify", mainImage: require("@/assets/BLOGHomepageScreenshot.png"), screenshots: [
+            blogify: {title: "BLOGIFY", tech: ["HTML", "CSS", "Boostrap", "Vanilla JS"],description: "While front-end frameworks are the future of web development, it is important to be well-versed in the fundamentals. I challenged myself to create a website using the basic building-blocks of HTML, CSS, some Bootstrap, and vanilla JavaScript. The result is a lightweight yet responsive blog website template, complete with filtering functionality.", mainImage: require("@/assets/BLOGHomepageScreenshot.png"), screenshots: [
                 { url: require('@/assets/BLOGCardScreenshot.png')},
                 { url: require('@/assets/BLOGFooterScreenshot.png')}
 
@@ -201,9 +213,21 @@ export default {
 .project-title-underline {
     width: 80px;
     height: 2px;
-    background-color: #7a7976;
+    background-color: #455a64;
     margin-left: 16px;
     margin-bottom: 12px;
+}
+.tech-div {
+    background-color: #7fa6ad;
+    display: inline-block;
+    height: 30px;
+    border-radius: 17px;
+    padding: 4px 8px 4px 8px;
+    margin-left: 16px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 .project-description {
     font-size: 1em;
@@ -233,8 +257,8 @@ export default {
 
 /* SM */
 @media (max-width: 960px) {
-    /* .image {
+    .image {
         border: 1px solid lightgrey;
-    } */
+    }
 }
 </style>

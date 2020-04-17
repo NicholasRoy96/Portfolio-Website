@@ -8,14 +8,8 @@
                 </v-col>
                 <v-col cols="12">
                     <p align="center" class="heading-subtitle">I love backend web development.</p>
-                    <p align="center" class="backend-description">Try interacting with the below RESTful API built using Express, Node.js, and MongoDB.</p>
+                    <p align="center" class="backend-description">Try interacting with the RESTful API below built using <strong>Express</strong>, <strong>Node.js</strong>, and <strong>MongoDB.</strong></p>
                 </v-col>
-                <div class="d-flex">
-                    <h1 class="view-code-title">View the code on</h1>
-                    <v-btn icon>
-                        <v-icon size="32" color="black">mdi-github</v-icon>
-                    </v-btn>
-                </div>
             </v-row>
 
             <v-row justify="center">
@@ -112,7 +106,7 @@
 
                 <!-- Output -->
                 <v-col cols="12" sm="10" md="7" class="mt-10 mt-md-0">
-                    <h1 align="center" class="create-view-heading">VIEW USERS</h1>
+                    <h1 align="center" class="create-view-heading">VIEW LATEST USERS</h1>
                     <h1 align="center" class="ml-md-8 no-users-heading" v-if="!users.length">No users exist. Try creating one!</h1>
                     <v-row class="ml-md-8">
                         <v-col cols="12" v-for="(user, i) in users" :key="i">
@@ -237,9 +231,6 @@
                                                 <v-btn icon :disabled="!user.valid" @click="updateUser(user)">
                                                     <v-icon color="green">mdi-check-outline</v-icon>
                                                 </v-btn>
-                                                <v-btn icon disabled>
-                                                    <v-icon color="red">mdi-close-circle</v-icon>
-                                                </v-btn>
                                             </div>
                                         </v-row>
                                     </v-form>
@@ -248,6 +239,14 @@
                         </v-col>
                     </v-row>
                 </v-col>
+
+                <div class="d-flex mt-10">
+                    <h1 class="view-code-title">View the code on</h1>
+                    <v-btn icon href="https://github.com/NicholasRoy96/portfolio-api" target="_blank">
+                        <v-icon size="32" color="black">mdi-github</v-icon>
+                    </v-btn>
+                </div>
+
             </v-row>
         </v-container>
     </div>
@@ -307,7 +306,7 @@ export default {
             }
         },
         async getUsers () {
-            await axios.get('http://localhost:3000/user/getAll')
+            await axios.get('https://git.heroku.com/nick-roy-api.git/user/getAll')
             .then(response => {
                 this.users = response.data.reverse().slice(0, 3)
                 .map(user => {
@@ -319,7 +318,7 @@ export default {
         async createUser () {
             this.validate()
             if (this.createValidate()) {
-                await axios.post('http://localhost:3000/user/create', {
+                await axios.post('https://git.heroku.com/nick-roy-api.git/user/create', {
                     forename: this.forename,
                     surname: this.surname,
                     email: this.email,
@@ -334,7 +333,7 @@ export default {
             }
         },
         async deleteUser (id) {
-            await axios.delete(`http://localhost:3000/user/delete/${id}`)
+            await axios.delete(`https://git.heroku.com/nick-roy-api.git/user/delete/${id}`)
             .then((response) => {
                 console.log(response)
                 this.getUsers()
@@ -349,7 +348,7 @@ export default {
                     email: user.email,
                     dob: user.dob
                 }
-                await axios.put(`http://localhost:3000/user/update/${user._id}`, updateDocument)
+                await axios.put(`https://git.heroku.com/nick-roy-api.git/user/update/${user._id}`, updateDocument)
                 .then(response => {
                     console.log(response)
                     user.editing = false
