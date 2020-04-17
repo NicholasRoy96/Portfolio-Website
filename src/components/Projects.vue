@@ -24,7 +24,7 @@
                     </v-col>
                     <v-col cols="12" sm="10" md="6" align-self="center">
                         <v-card flat>
-                                <v-img class="image" :src="coinsumption.mainImage" />                      
+                                <v-img class="image" v-lazy="coinsumption.mainImage" />                      
                         </v-card>
                     </v-col>
                 </v-row>
@@ -43,7 +43,7 @@
                                 <v-card flat class="d-flex">
                                         <v-img
                                             class="image"
-                                            :src="screenshot.url"
+                                            v-lazy="screenshot.url"
                                         >
                                         </v-img>
                                 </v-card>
@@ -62,7 +62,7 @@
             <v-row justify="center" class="d-none d-md-flex mt-12">
                 <v-col cols="12" sm="10" md="6" align-self="center"> 
                     <v-card flat>
-                        <v-img class="image" :src="blogify.mainImage" />
+                        <v-img class="image" v-lazy="blogify.mainImage" />
                     </v-card>
                 </v-col>
                 <v-col cols="10" md="6">
@@ -95,7 +95,7 @@
                 </v-col>
                 <v-col cols="12" sm="10" md="6"> 
                     <v-card flat>
-                        <v-img class="image" :src="blogify.mainImage" />
+                        <v-img class="image" v-lazy="blogify.mainImage" />
                     </v-card>
                 </v-col>
             </v-row>
@@ -113,7 +113,7 @@
                             <v-card flat class="d-flex">
                                     <v-img
                                         class="image"
-                                        :src="screenshot.url"
+                                        v-lazy="screenshot.url"
                                     >
                                     </v-img>
                             </v-card>
@@ -140,7 +140,7 @@
                     </v-col>
                     <v-col cols="12" sm="10" md="6" align-self="center">
                         <v-card flat>
-                            <v-img class="image" :src="baileyCoaching.mainImage" />
+                            <v-img class="image" v-lazy="baileyCoaching.mainImage" />
                         </v-card>
                     </v-col>
                 </v-row>
@@ -159,7 +159,7 @@
                                 <v-card flat class="d-flex">
                                         <v-img
                                             class="image"
-                                            :src="screenshot.url"
+                                            v-lazy="screenshot.url"
                                         >
                                         </v-img>
                                 </v-card>
