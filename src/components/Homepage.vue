@@ -127,6 +127,7 @@ export default {
     width: 100%;
     justify-content: center;
     align-items: center;
+    font-family: raleway, sans-serif;
 }
 
 .title-container {
