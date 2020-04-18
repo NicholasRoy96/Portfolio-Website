@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <Homepage />
+    <Homepage id="homepage"/>
     <Navbar />
     <v-content class="pt-0">
       <Projects id="frontend"/>

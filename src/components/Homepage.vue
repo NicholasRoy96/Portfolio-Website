@@ -211,7 +211,7 @@ font-weight: normal;
         font-size: 1.5em;
     }
     .type-container {
-        font-size: 1em;
+        font-size: 0.875em;
     }
 }
 </style>

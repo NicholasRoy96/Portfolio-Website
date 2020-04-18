@@ -10,7 +10,7 @@
 
     <!-- COINSUMPTION-->
                 <v-row justify="center">
-                    <v-col cols="10" md="6">
+                    <v-col cols="12" sm="10" md="6">
                         <v-card flat color="transparent">
                             <h1 class="project-title">{{coinsumption.title}}</h1>
                             <div class="project-title-underline"></div>
@@ -18,8 +18,10 @@
                                 <p>{{tech}}</p>
                             </div>
                             <v-card-text class="project-description">{{coinsumption.description}}</v-card-text>
-                            <v-btn large class="project-button ma-4 mt-8 mr-8" outlined href="https://coinsumption.herokuapp.com/" target="_blank">Visit website</v-btn>
-                            <v-btn large class="project-button ma-4 mt-8 ml-8" outlined href="https://github.com/NicholasRoy96/coinsumption_app" target="_blank">View code</v-btn>
+                            <div class="d-flex">
+                                <v-btn large class="project-button ma-4 mt-8" outlined href="https://coinsumption.herokuapp.com/" target="_blank">Visit website</v-btn>
+                                <v-btn large class="project-button ma-4 mt-8 ml-8" outlined href="https://github.com/NicholasRoy96/coinsumption_app" target="_blank">View code</v-btn>
+                            </div>
                         </v-card>
                     </v-col>
                     <v-col cols="12" sm="10" md="6" align-self="center">
@@ -65,7 +67,7 @@
                         <v-img class="image" :src="blogify.mainImage" />
                     </v-card>
                 </v-col>
-                <v-col cols="10" md="6">
+                <v-col md="6">
                     <v-card flat color="transparent">
                         <h1 class="project-title">{{blogify.title}}</h1>
                         <div class="project-title-underline"></div>
@@ -73,15 +75,17 @@
                             <p>{{tech}}</p>
                         </div>
                         <v-card-text class="project-description">{{blogify.description}}</v-card-text>
-                        <v-btn large class="project-button ma-4 mt-8" outlined href="https://nicholasroy96.github.io/blogify/" target="_blank">Visit website</v-btn>
-                        <v-btn large class="project-button ma-4 mt-8 ml-8" outlined href="https://github.com/NicholasRoy96/blogify" target="_blank">View code</v-btn>
+                        <div class="d-flex">
+                            <v-btn large class="project-button ma-4 mt-8" outlined href="https://nicholasroy96.github.io/blogify/" target="_blank">Visit website</v-btn>
+                            <v-btn large class="project-button ma-4 mt-8 ml-8" outlined href="https://github.com/NicholasRoy96/blogify" target="_blank">View code</v-btn>
+                        </div>
                     </v-card>
                 </v-col>
             </v-row>
 
             <!-- SM - -->
             <v-row justify="center" class="d-md-none mt-6">
-                <v-col cols="10" md="6" align-self="center">
+                <v-col cols="12" sm="10" align-self="center">
                     <v-card flat color="transparent">
                         <h1 class="project-title">{{blogify.title}}</h1>
                         <div class="project-title-underline"></div>
@@ -89,11 +93,13 @@
                             <p>{{tech}}</p>
                         </div>
                         <v-card-text class="project-description">{{blogify.description}}</v-card-text>
-                        <v-btn large class="project-button ma-4 mt-8" outlined href="https://nicholasroy96.github.io/blogify/" target="_blank">Visit website</v-btn>
-                        <v-btn large class="project-button ma-4 mt-8 ml-8" outlined href="https://github.com/NicholasRoy96/blogify" target="_blank">View code</v-btn>
+                        <div class="d-flex">
+                            <v-btn large class="project-button ma-4 mt-8" outlined href="https://nicholasroy96.github.io/blogify/" target="_blank">Visit website</v-btn>
+                            <v-btn large class="project-button ma-4 mt-8 ml-8" outlined href="https://github.com/NicholasRoy96/blogify" target="_blank">View code</v-btn>
+                        </div>
                     </v-card>
                 </v-col>
-                <v-col cols="12" sm="10" md="6"> 
+                <v-col cols="12" sm="10"> 
                     <v-card flat>
                         <v-img class="image" :src="blogify.mainImage" />
                     </v-card>
@@ -127,7 +133,7 @@
         <div>
             <v-container>
                 <v-row justify="center" class="mt-6 mt-md-12">
-                    <v-col cols="10" md="6">
+                    <v-col cols="12" sm="10" md="6">
                         <v-card flat color="transparent">
                             <h1 class="project-title">{{baileyCoaching.title}}</h1>
                             <div class="project-title-underline"></div>
@@ -195,6 +201,25 @@ export default {
 }
 </script>
 
+<style>
+/* MEDIA QUERIES */
+
+/* SM */
+@media (max-width: 960px) {
+
+}
+
+/* XS */
+@media (max-width: 600px) {
+    .v-btn:not(.v-btn--round).v-size--large {
+        padding: 0 10px;
+    }
+    .v-btn__content {
+        font-size: 0.8em;
+    }
+}
+</style>
+
 <style scoped>
 .project-fontstyling {
     color: #444649;
@@ -247,18 +272,32 @@ export default {
 .project-button {
     background-color: white;
     color: #5d91a8;
-    
+    margin: 32px 16px 16px 16px;
 }
 .project-button:hover {
     color: white;
     background-color: #5d91a8;
 }
+
 /* MEDIA QUERIES */
+
+/* MD */
+@media (max-width: 1264px) {
+
+}
 
 /* SM */
 @media (max-width: 960px) {
     .image {
         border: 1px solid lightgrey;
     }
+    .project-button {
+        padding: 0 10px;
+    }
+}
+
+/* XS */
+@media (max-width: 600px) {
+
 }
 </style>

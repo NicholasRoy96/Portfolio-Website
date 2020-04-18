@@ -14,20 +14,19 @@
                 </v-col>
             </v-row>
 
+            <v-row justify="center" class="mb-7">
+                <div class="cv-div">
+                    <v-icon class="div-icon">mdi-file-document-outline</v-icon>
+                    <a href="https://www.google.com/search?sa=X&sxsrf=ALeKk03DlV5kDd2cA8LbeqTm1LWCU-NVdg:1587122642409&q=coronavirus&oi=ddle&ct=153205521&hl=en-GB&ved=0ahUKEwix17_KrO_oAhWKnxQKHSJnCbIQPQgP&biw=1792&bih=906&dpr=2" target="_blank">
+                        <p class="div-email">CV</p>
+                    </a>
+                </div>
+            </v-row>
             <v-row justify="center" class="mb-12">
-                    <!-- <v-btn large class="project-button" outlined href="https://nicholasroy96.github.io/blogify/" target="_blank">
-                        View my CV
-                    </v-btn> -->
-                    <div class="cv-div">
-                        <v-icon class="div-icon">mdi-file-document-outline</v-icon>
-                        <a href="https://www.google.com/search?sa=X&sxsrf=ALeKk03DlV5kDd2cA8LbeqTm1LWCU-NVdg:1587122642409&q=coronavirus&oi=ddle&ct=153205521&hl=en-GB&ved=0ahUKEwix17_KrO_oAhWKnxQKHSJnCbIQPQgP&biw=1792&bih=906&dpr=2" target="_blank">
-                            <p class="div-email">CV</p>
-                        </a>
-                    </div>
-                    <div class="email-div">
-                        <v-icon class="div-icon">mdi-email-outline</v-icon>
-                        <p class="div-email">nicholas.roy12@gmail.com</p>
-                    </div>
+                <div class="email-div">
+                    <v-icon class="div-icon">mdi-email-outline</v-icon>
+                    <p class="div-email">nicholas.roy12@gmail.com</p>
+                </div>
             </v-row>
 
         </v-container>
@@ -60,15 +59,6 @@ export default {
     font-size: 1.8em;
     font-weight: bold;
 }
-.project-button {
-    background-color: white;
-    color: #455a64;
-    
-}
-.project-button:hover {
-    color: white;
-    background-color: #5d91a8;
-}
 .cv-div {
     display: flex;
     align-items: center;
@@ -76,7 +66,6 @@ export default {
 .email-div {
     display: flex;
     align-items: center;
-    margin-left: 60px;
 }
 .div-icon {
     color: #5d91a8;
