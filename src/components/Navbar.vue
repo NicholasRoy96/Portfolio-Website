@@ -153,11 +153,11 @@ export default {
 
 <style>
 .bm-burger-bars {
-    background-color: white;
+    background-color: white !important;
 }
 .bm-menu {
-    background-color: #455a64;
-    border-right: 1px solid darkgrey;
+    background-color: #455a64 !important;
+    border-right: 1px solid darkgrey !important;
 }
 .bm-item-list > * > span:hover {
     margin-left: 10px;

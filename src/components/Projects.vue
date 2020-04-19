@@ -15,7 +15,7 @@
                             <h1 class="project-title">{{coinsumption.title}}</h1>
                             <div class="project-title-underline"></div>
                             <div v-for="(tech, index) in coinsumption.tech" :key="index" class="tech-div">
-                                <p>{{tech}}</p>
+                                <p class="tech-tag">{{tech}}</p>
                             </div>
                             <v-card-text class="project-description">{{coinsumption.description}}</v-card-text>
                             <div class="d-flex">
@@ -31,28 +31,24 @@
                     </v-col>
                 </v-row>
 
-                <v-row justify="center" class="mb-12">
-                    <v-col cols="12">
-                        <v-row justify="center">
-                            <v-col
-                                v-for="(screenshot, index) in coinsumption.screenshots"
-                                :key="index"
-                                class="d-flex child-flex"
-                                cols="12"
-                                sm="10"
-                                md="6"
-                            >
-                                <v-card flat class="d-flex">
-                                        <v-img
-                                            class="image"
-                                            :src="screenshot.url"
-                                        >
-                                        </v-img>
-                                </v-card>
-                            </v-col>
-                        </v-row>
+                <v-row justify="center" class="mb-0 mb-sm-4">
+                    <v-col
+                        v-for="(screenshot, index) in coinsumption.screenshots"
+                        :key="index"
+                        class="d-flex child-flex"
+                        cols="12"
+                        sm="10"
+                        md="6"
+                    >
+                        <v-card flat class="d-flex">
+                                <v-img
+                                    class="image"
+                                    :src="screenshot.url"
+                                >
+                                </v-img>
+                        </v-card>
                     </v-col>
-                </v-row>   
+                </v-row>
             </v-container>
 
 
@@ -62,7 +58,7 @@
 
         <!-- MD + -->
             <v-row justify="center" class="d-none d-md-flex mt-12">
-                <v-col cols="12" sm="10" md="6" align-self="center"> 
+                <v-col cols="6" align-self="center"> 
                     <v-card flat>
                         <v-img class="image" :src="blogify.mainImage" />
                     </v-card>
@@ -72,7 +68,7 @@
                         <h1 class="project-title">{{blogify.title}}</h1>
                         <div class="project-title-underline"></div>
                         <div v-for="(tech, index) in blogify.tech" :key="index" class="tech-div">
-                            <p>{{tech}}</p>
+                            <p class="tech-tag" justify="center">{{tech}}</p>
                         </div>
                         <v-card-text class="project-description">{{blogify.description}}</v-card-text>
                         <div class="d-flex">
@@ -105,28 +101,24 @@
                     </v-card>
                 </v-col>
             </v-row>
-            <v-row justify="center" class="mb-12">
-                <v-col cols="12">
-                    <v-row justify="center">
-                        <v-col
-                            v-for="(screenshot, index) in blogify.screenshots"
-                            :key="index"
-                            class="d-flex child-flex"
-                            cols="12"
-                            sm="10"
-                            md="6"
-                        >
-                            <v-card flat class="d-flex">
-                                    <v-img
-                                        class="image"
-                                        :src="screenshot.url"
-                                    >
-                                    </v-img>
-                            </v-card>
-                        </v-col>
-                    </v-row>
+            <v-row justify="center" class="mb-0 mb-sm-4">
+                <v-col
+                    v-for="(screenshot, index) in blogify.screenshots"
+                    :key="index"
+                    class="d-flex child-flex"
+                    cols="12"
+                    sm="10"
+                    md="6"
+                >
+                    <v-card flat class="d-flex">
+                            <v-img
+                                class="image"
+                                :src="screenshot.url"
+                            >
+                            </v-img>
+                    </v-card>
                 </v-col>
-            </v-row>   
+            </v-row>
         </v-container>
 
     <!-- MARK BAILEY COACHING -->
@@ -151,28 +143,24 @@
                     </v-col>
                 </v-row>
 
-                <v-row justify="center" class="mb-12">
-                    <v-col cols="12">
-                        <v-row justify="center">
-                            <v-col
-                                v-for="(screenshot, index) in baileyCoaching.screenshots"
-                                :key="index"
-                                class="d-flex child-flex"
-                                cols="12"
-                                sm="10"
-                                md="6"
-                            >
-                                <v-card flat class="d-flex">
-                                        <v-img
-                                            class="image"
-                                            :src="screenshot.url"
-                                        >
-                                        </v-img>
-                                </v-card>
-                            </v-col>
-                        </v-row>
+                <v-row justify="center" class="mb-0 mb-sm-4">
+                    <v-col
+                        v-for="(screenshot, index) in baileyCoaching.screenshots"
+                        :key="index"
+                        class="d-flex child-flex"
+                        cols="12"
+                        sm="10"
+                        md="6"
+                    >
+                        <v-card flat class="d-flex">
+                                <v-img
+                                    class="image"
+                                    :src="screenshot.url"
+                                >
+                                </v-img>
+                        </v-card>
                     </v-col>
-                </v-row>   
+                </v-row>
             </v-container>
         </div>
     </div>
@@ -187,11 +175,11 @@ export default {
                 { url: require('@/assets/CSExchangeScreenshot.png') },
                 { url: require('@/assets/CSExchangeTableScreenshot.png') }
             ]},
-            baileyCoaching: {title: "MARK BAILEY COACHING", tech: ["Wordpress", "CSS"], description: "As a freelance project, I was asked to create a business website for personal training business. The brief was simple: a colour scheme of white, purple, and black, and the site must be built using a CMS. After several client meetings and feasibility studies, the end result is a stylish, responsive WordPress site.", mainImage: require("@/assets/MBHomepageScreenshot.png"), screenshots: [
+            baileyCoaching: {title: "MARK BAILEY COACHING", tech: ["WordPress", "CSS"], description: "As a freelance project, I was asked to create a business website for personal training business. The brief was simple: a colour scheme of white, purple, and black, and the site must be built using a CMS. After several client meetings and feasibility studies, the end result is a stylish, responsive WordPress site.", mainImage: require("@/assets/MBHomepageScreenshot.png"), screenshots: [
                 { url: require('@/assets/MBAboutScreenshot.png') },
                 { url: require('@/assets/MBTestimonialModalScreenshot.png') },
             ]},
-            blogify: {title: "BLOGIFY", tech: ["HTML", "CSS", "Boostrap", "Vanilla JS"],description: "While front-end frameworks are the future of web development, it is important to be well-versed in the fundamentals. I challenged myself to create a website using the basic building-blocks of HTML, CSS, some Bootstrap, and vanilla JavaScript. The result is a lightweight yet responsive blog website template, complete with filtering functionality.", mainImage: require("@/assets/BLOGHomepageScreenshot.png"), screenshots: [
+            blogify: {title: "BLOGIFY", tech: ["HTML", "CSS", "Boostrap", "JavaScript"],description: "While front-end frameworks are the future of web development, it is important to be well-versed in the fundamentals. I challenged myself to create a website using the basic building-blocks of HTML, CSS, some Bootstrap, and vanilla JavaScript. The result is a lightweight yet responsive blog website template, complete with filtering functionality.", mainImage: require("@/assets/BLOGHomepageScreenshot.png"), screenshots: [
                 { url: require('@/assets/BLOGCardScreenshot.png')},
                 { url: require('@/assets/BLOGFooterScreenshot.png')}
 
@@ -251,23 +239,16 @@ export default {
     margin-left: 16px;
     text-align: center;
     color: white;
-    font-weight: bold;
+    font-weight: normal;
     margin-bottom: 10px;
+}
+.tech-tag {
+    padding: 0 2px 6px 2px;
+    margin: 0;
 }
 .project-description {
     font-size: 1em;
     margin-top: 5px;
-}
-.project-technologies-title {
-    color: #7a7976;
-    font-weight: 800;
-    font-size: 1.4em;
-}
-.project-technologies {
-    font-size: 1.4em;
-    color: #5d91a8;
-    margin-left: 8px;
-    font-weight: 500;
 }
 .project-button {
     background-color: white;
