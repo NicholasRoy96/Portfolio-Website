@@ -20,15 +20,15 @@
         <a
           class="name-link"
           v-scroll-to="{
-                    el: '#homepage',
-                    duration: 1000,
-                    easing: 'linear',
-                    offset: 0,
-                    force: true,
-                    cancelable: true,
-                    x: false,
-                    y: true
-                }"
+            el: '#homepage',
+            duration: 1000,
+            easing: 'linear',
+            offset: 0,
+            force: true,
+            cancelable: true,
+            x: false,
+            y: true
+          }"
         >
           <strong>Nicholas Roy</strong>
         </a>

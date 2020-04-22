@@ -20,19 +20,18 @@
             <v-btn
               text
               block
-              href="https://www.google.com/search?sa=X&sxsrf=ALeKk03DlV5kDd2cA8LbeqTm1LWCU-NVdg:1587122642409&q=coronavirus&oi=ddle&ct=153205521&hl=en-GB&ved=0ahUKEwix17_KrO_oAhWKnxQKHSJnCbIQPQgP&biw=1792&bih=906&dpr=2"
+              href="https://drive.google.com/open?id=1CNqsi1WXzsb0LYGXhNtLT-0ohX93riFUHp3gKtHSAqU"
               target="_blank"
             >
-              <v-icon class="div-icon" left>mdi-file-document-outline</v-icon>CV
+              <v-icon class="div-icon" left>mdi-file-document-outline</v-icon><span>CV</span>
             </v-btn>
           </div>
         </v-col>
       </v-row>
       <v-row justify="center" class="mb-12">
         <div class="email-div">
-          <v-btn disabled text>
-            <v-icon class="div-icon" left>mdi-email-outline</v-icon>nicholas.roy12@gmail.com
-          </v-btn>
+          <v-icon class="div-icon" left>mdi-email-outline</v-icon>
+          <span class="email">nicholas.roy12@gmail.com</span>
         </div>
       </v-row>
     </v-container>
@@ -46,6 +45,9 @@ export default {
 </script>
 
 <style scoped>
+#contact > div > div.row.mb-7.justify-center > div > div > a > span > span {
+  font-size: 1.3em;
+}
 .background {
   border-top: 1px solid darkgrey;
   color: white;
@@ -72,13 +74,17 @@ export default {
 .email-div {
   display: flex;
   align-items: center;
+  color: black;
 }
 .div-icon {
-  color: #5d91a8;
+  color: black;
+  padding-right: 30px;
+  opacity: 0.8;
 }
-
-#contact > div > div.row.mb-12.justify-center > div > button,
-#contact > div > div.row.mb-12.justify-center > div > button > span > i {
-  color: #000 !important;
+.email {
+  vertical-align: middle;
+  letter-spacing: 1px;
+  font-size: 1.3em;
+  opacity: 0.8;
 }
 </style>

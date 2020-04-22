@@ -126,8 +126,8 @@ export default {
           email: this.email,
           dob: this.dob
         });
+        this.reset();
       }
-      this.reset();
     }
   }
 };

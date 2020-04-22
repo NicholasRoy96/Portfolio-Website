@@ -7,30 +7,30 @@
         class="nav-button"
         x-large
         v-scroll-to="{
-                el: '#frontend',
-                duration: 1000,
-                easing: 'linear',
-                offset: 0,
-                force: true,
-                cancelable: true,
-                x: false,
-                y: true
-            }"
+          el: '#frontend',
+          duration: 1000,
+          easing: 'linear',
+          offset: 0,
+          force: true,
+          cancelable: true,
+          x: false,
+          y: true
+        }"
       >Frontend</v-btn>
       <v-btn
         text
         class="nav-button"
         x-large
         v-scroll-to="{
-                el: '#backend',
-                duration: 1000,
-                easing: 'linear',
-                offset: 0,
-                force: true,
-                cancelable: true,
-                x: false,
-                y: true
-            }"
+          el: '#backend',
+          duration: 1000,
+          easing: 'linear',
+          offset: 0,
+          force: true,
+          cancelable: true,
+          x: false,
+          y: true
+        }"
       >Backend</v-btn>
       <v-btn
         text
@@ -38,14 +38,14 @@
         class="nav-button contact"
         x-large
         v-scroll-to="{
-                el: '#contact',
-                duration: 1000,
-                easing: 'linear',
-                offset: 0,
-                force: true,
-                x: false,
-                y: true
-            }"
+          el: '#contact',
+          duration: 1000,
+          easing: 'linear',
+          offset: 0,
+          force: true,
+          x: false,
+          y: true
+        }"
       >Contact</v-btn>
     </v-app-bar>
 
@@ -54,15 +54,15 @@
       <a
         class="nav-button-hamburger"
         v-scroll-to="{
-                el: '#frontend',
-                duration: 1000,
-                easing: 'linear',
-                offset: 0,
-                force: true,
-                cancelable: true,
-                x: false,
-                y: true
-            }"
+          el: '#frontend',
+          duration: 1000,
+          easing: 'linear',
+          offset: 0,
+          force: true,
+          cancelable: true,
+          x: false,
+          y: true
+        }"
       >
         <v-icon class="nav-icon-hamburger">mdi-code-tags</v-icon>
         <span>Frontend</span>
@@ -70,15 +70,15 @@
       <a
         class="nav-button-hamburger"
         v-scroll-to="{
-                el: '#backend',
-                duration: 1000,
-                easing: 'linear',
-                offset: 0,
-                force: true,
-                cancelable: true,
-                x: false,
-                y: true
-            }"
+          el: '#backend',
+          duration: 1000,
+          easing: 'linear',
+          offset: 0,
+          force: true,
+          cancelable: true,
+          x: false,
+          y: true
+        }"
       >
         <v-icon class="nav-icon-hamburger">mdi-cog-outline</v-icon>
         <span>Backend</span>
@@ -86,15 +86,15 @@
       <a
         class="nav-button-hamburger bottom-button"
         v-scroll-to="{
-                el: '#contact',
-                duration: 1000,
-                easing: 'linear',
-                offset: 0,
-                force: true,
-                cancelable: true,
-                x: false,
-                y: true
-            }"
+          el: '#contact',
+          duration: 1000,
+          easing: 'linear',
+          offset: 0,
+          force: true,
+          cancelable: true,
+          x: false,
+          y: true
+        }"
       >
         <v-icon class="nav-icon-hamburger">mdi-email-outline</v-icon>
         <span>Contact</span>

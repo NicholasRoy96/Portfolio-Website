@@ -114,7 +114,7 @@ export default {
         title: "COINSUMPTION",
         tech: ["Vue.js", "Vuetify", "HTML", "CSS"],
         description:
-          "Developed as a personal project, coinsumption is a currency exchange application that utilises live market rates fetched from an open API. Built using Vue.js and Vuetify, Coinsumption is a highly scalable application.",
+          "Developed as a personal project, Coinsumption is a currency exchange application that utilises live market rates fetched from an open API. Built using Vue.js and Vuetify, Coinsumption is a highly scalable application.",
         links: {
           liveLink: "https://coinsumption.herokuapp.com/",
           codeLink: "https://github.com/NicholasRoy96/coinsumption_app"
@@ -144,7 +144,6 @@ export default {
           "As a freelance project, I was asked to create a business website for a personal training business. The brief was simple: a colour scheme of white, purple, and black, and the site must be built using a CMS. After several client meetings and feasibility studies, the end result is a stylish, responsive WordPress site.",
         links: {
           liveLink: "http://markbaileycoaching.co.uk/",
-          codeLink: "N/A"
         },
         mainImage: "MBHomepageScreenshot.png",
         screenshots: [

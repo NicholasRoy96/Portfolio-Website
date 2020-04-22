@@ -15,6 +15,7 @@
         target="_blank"
       >Visit website</v-btn>
       <v-btn
+        v-if="project.links.codeLink"
         large
         class="project-button ma-4 mt-8 ml-8"
         outlined
