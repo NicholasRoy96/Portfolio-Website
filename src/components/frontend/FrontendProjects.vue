@@ -8,8 +8,43 @@
         </v-col>
       </v-row>
 
+      <!-- STREAM -->
+      <v-container>
+        <!-- MD + -->
+        <v-row justify="center" class="d-none d-md-flex">
+          <v-col cols="6" align-self="center">
+            <MainImage :imageName="stream.mainImage" />
+          </v-col>
+          <v-col md="6">
+            <Description :project="stream" />
+          </v-col>
+        </v-row>
+
+        <!-- SM - -->
+        <v-row justify="center" class="d-md-none">
+          <v-col cols="12" sm="10" align-self="center">
+            <Description :project="stream" />
+          </v-col>
+          <v-col cols="12" sm="10">
+            <MainImage :imageName="stream.mainImage" />
+          </v-col>
+        </v-row>
+        <v-row justify="center" class="mb-0 mb-sm-4">
+          <v-col
+            v-for="(screenshot, index) in stream.screenshots"
+            :key="index"
+            class="d-flex child-flex"
+            cols="12"
+            sm="10"
+            md="6"
+          >
+            <Screenshot :screenshotName="screenshot" />
+          </v-col>
+        </v-row>
+      </v-container>
+
       <!-- COINSUMPTION-->
-      <v-row justify="center">
+      <v-row justify="center" class="mt-12">
         <v-col cols="12" sm="10" md="6">
           <Description :project="coinsumption" />
         </v-col>
@@ -110,6 +145,21 @@ export default {
   },
   data() {
     return {
+      stream: {
+        title: "STREAM",
+        tech: ["Vue.js", "Nuxt.js", "Vuex", "Vuetify"],
+        description:
+          "Stream is a concept movie and TV streaming site built using Nuxt.js (SSR), Vuetify, Vuex, and utilises data from the TMDB open API. The site includes multiple complex features, such as a state-based watchlist, a live search feature, and dynamically populated movie, actor, and TV information pages.",
+        links: {
+          liveLink: "http://stream-co.herokuapp.com/",
+          codeLink: "https://github.com/NicholasRoy96/stream"
+        },
+        mainImage: "StreamHomepageScreenshot.png",
+        screenshots: [
+          "StreamRecentViewedScreenshot.png",
+          "StreamTVScreenshot.png"
+        ]
+      },
       coinsumption: {
         title: "COINSUMPTION",
         tech: ["Vue.js", "Vuetify", "HTML", "CSS"],
