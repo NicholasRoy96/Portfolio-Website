@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app id="app">
     <Homepage id="homepage" />
     <Navbar />
     <v-content class="pt-0">
@@ -36,6 +36,9 @@ export default {
 </script>
 
 <style>
+#app {
+  font-family: 'Poppins', sans-serif;
+}
 .heading {
   font-family: raleway-bold, sans-serif;
   font-size: 30pt;

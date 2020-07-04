@@ -156,8 +156,8 @@ export default {
         },
         mainImage: "StreamHomepageScreenshot.png",
         screenshots: [
-          "StreamRecentViewedScreenshot.png",
-          "StreamTVScreenshot.png"
+          "StreamTVScreenshot.png",
+          "StreamTVScreenshotInfo.png"
         ]
       },
       coinsumption: {
